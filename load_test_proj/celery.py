@@ -14,3 +14,6 @@ def debug_task(self):
 # celery -A load_test_proj  worker -l info
 # celery -A load_test_proj worker -l info -P solo
 # python manage.py load_test --num 2000 --size 10
+# python manage.py load_test --num 1 --size 1
+# python manage.py load_test --num 3 --size 1
+# celery -A load_test_proj worker -l info -P threads -c 10

@@ -9,10 +9,11 @@ def mock_heavy_task(size_in_gb=3):
     data_holder = []
 
     for _ in range(iterations):
-        data_holder.append(os.urandom(chunk_size))  # allocate and hold random bytes
-        time.sleep(0.05)            # simulate processing delay
+        # Create a 100MB byte chunk (fast allocation, low CPU)
+        data_holder.append(b'0' * chunk_size)
+        time.sleep(0.1)            # small delay to prevent freezing
 
-    # sleep to simulate holding memory for a while after allocation
-    time.sleep(10)
+    # sleep to simulate holding memory for a longer duration
+    time.sleep(60)
     
     return f"Simulated {size_in_gb}GB load"

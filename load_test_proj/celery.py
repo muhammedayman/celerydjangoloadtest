@@ -1,10 +1,10 @@
 from celery import Celery
 import os
-from extranet_backend.settings import env
+from load_test_proj.settings import env
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'extranet_backend.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'load_test_proj.settings')
 
-app = Celery('extranet_backend')
+app = Celery('load_test_proj')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 

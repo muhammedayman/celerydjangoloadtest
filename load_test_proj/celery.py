@@ -12,3 +12,5 @@ def debug_task(self):
     print('Request: {0!r}'.format(self.request))
 
 # celery -A load_test_proj  worker -l info
+# celery -A load_test_proj worker -l info -P solo
+# python manage.py load_test --num 2000 --size 10

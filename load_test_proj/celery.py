@@ -1,6 +1,5 @@
 from celery import Celery
 import os
-from load_test_proj.settings import env
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'load_test_proj.settings')
 
@@ -12,3 +11,4 @@ app.autodiscover_tasks()
 def debug_task(self):
     print('Request: {0!r}'.format(self.request))
 
+# celery -A load_test_proj  worker -l info

@@ -1,5 +1,4 @@
 
 celery
-colorama
 Django
 redis

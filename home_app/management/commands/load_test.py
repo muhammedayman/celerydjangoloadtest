@@ -1,6 +1,6 @@
 # myapp/management/commands/load_test.py
 from django.core.management.base import BaseCommand
-from tasks import mock_heavy_task
+from home_app.tasks import mock_heavy_task
 
 class Command(BaseCommand):
     help = "Enqueue Celery tasks for load testing"

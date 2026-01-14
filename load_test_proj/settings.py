@@ -120,3 +120,6 @@ STATIC_URL = 'static/'
 
 CELERY_BROKER_URL = 'redis://localhost:6379/4'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/4'
+
+# CELERY_BROKER_URL = 'redis://172.22.139.208:6379/4'
+# CELERY_RESULT_BACKEND = 'redis://172.22.139.208:6379/4'
